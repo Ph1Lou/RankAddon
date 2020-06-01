@@ -14,7 +14,7 @@ public class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        Bukkit.getPluginManager().registerEvents(this,this);
+
         ww = (GetWereWolfAPI) Bukkit.getPluginManager().getPlugin("pluginLG");
         ww.getExtraTexts().put("werewolf.role.role_example.display","RoleExample");
         try {
