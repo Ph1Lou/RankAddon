@@ -1,4 +1,4 @@
-package io.github.ph1lou;
+package io.github.ph1lou.addon;
 
 
 import io.github.ph1lou.pluginlgapi.GetWereWolfAPI;
@@ -27,7 +27,7 @@ public class RoleExample implements Roles, Listener,Cloneable {
     WereWolfAPI game;
     UUID uuid;
     Camp camp;
-    boolean infected;
+    boolean infected=false;
 
     public RoleExample(GetWereWolfAPI main, WereWolfAPI game, UUID uuid) {
         this.main=main;

@@ -1,4 +1,4 @@
-package io.github.ph1lou;
+package io.github.ph1lou.addon;
 
 import io.github.ph1lou.pluginlgapi.GetWereWolfAPI;
 import io.github.ph1lou.pluginlgapi.RoleRegister;
