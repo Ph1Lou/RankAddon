@@ -13,7 +13,7 @@ import org.bukkit.event.Listener;
 
 import java.util.UUID;
 
-public class RoleExample implements Roles, Listener {
+public class RoleExample implements Roles, Listener,Cloneable {
 
     GetWereWolfAPI main;
     WereWolfAPI game;
