@@ -26,7 +26,7 @@ public class RoleExample implements Roles, Listener,Cloneable {
     GetWereWolfAPI main;
     WereWolfAPI game;
     UUID uuid;
-    Camp camp;
+    Camp camp=Camp.VILLAGER;
     boolean infected=false;
 
     public RoleExample(GetWereWolfAPI main, WereWolfAPI game, UUID uuid) {
