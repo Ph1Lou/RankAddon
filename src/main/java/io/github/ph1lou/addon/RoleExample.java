@@ -60,7 +60,7 @@ public class RoleExample implements Roles, Listener,Cloneable {
 
     @Override
     public Camp getCamp() {
-        return Camp.VILLAGER;
+        return this.camp;
     }
 
     @Override
