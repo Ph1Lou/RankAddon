@@ -3,6 +3,7 @@ package io.github.ph1lou.addon;
 import io.github.ph1lou.pluginlgapi.GetWereWolfAPI;
 import io.github.ph1lou.pluginlgapi.RoleRegister;
 import io.github.ph1lou.pluginlgapi.WereWolfAPI;
+import io.github.ph1lou.pluginlgapi.enumlg.Category;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -20,7 +21,7 @@ public class Main extends JavaPlugin {
 
         try {
             RoleRegister exampleRole = new RoleRegister(ww,"werewolf.role.role_example.display").registerRole(RoleExample.class.getConstructor(GetWereWolfAPI.class, WereWolfAPI.class, UUID.class)).setName("ExampleRole");
-            exampleRole.setLore(Arrays.asList("Role Example","Fait par Ph1Lou")).create();
+            exampleRole.setLore(Arrays.asList("Role Example","Fait par Ph1Lou")).addCategory(Category.ADDONS).create();
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
         }
