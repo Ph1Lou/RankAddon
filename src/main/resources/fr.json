@@ -1,0 +1,10 @@
+{
+  "werewolf": {
+    "role": {
+      "role_example": {
+        "display": "Role Example",
+        "description": "Blabla"
+      }
+    }
+  }
+}

@@ -65,12 +65,17 @@ public class RoleExample implements Roles, Listener,Cloneable {
 
     @Override
     public String getDescription() {
-        return "Vous êtes RoleExample";
+        return game.translate("werewolf.role.role_example.description");
     }
 
     @Override
     public String getDisplay() {
         return "werewolf.role.role_example.display";
+    }
+
+    @Override
+    public Boolean isDisplay(String s) {
+        return s.equals(getDisplay());
     }
 
     @Override

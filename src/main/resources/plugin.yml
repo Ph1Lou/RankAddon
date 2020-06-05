@@ -1,7 +1,7 @@
 name: pluginexample
 version: "1.0"
 author: Ph1Lou
-main: io.github.ph1lou.Main
+main: io.github.ph1lou.addon.Main
 api-version: "1.8"
 load: STARTUP
 depend: [pluginLG]
