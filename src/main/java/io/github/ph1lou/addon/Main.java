@@ -20,10 +20,12 @@ public class Main extends JavaPlugin {
         ww = (GetWereWolfAPI) Bukkit.getPluginManager().getPlugin("pluginLG");
 
         ww.loadTranslation(this,"fr");
+        ww.getExtraRoleStuff().add(this);
+
 
         try {
-            RoleRegister exampleRole = new RoleRegister(ww,"werewolf.role.role_example.display").registerRole(RoleExample.class);
-            exampleRole.setLore(Arrays.asList("§fRole Example","§fFait par §bPh1Lou")).addCategory(Category.ADDONS).create();
+            RoleRegister exampleRole = new RoleRegister(this,ww,"werewolf.role.role_example.display").registerRole(RoleExample.class);
+            exampleRole.setLore(Arrays.asList("§fRole Example","§fFait par §bPh1Lou")).addCategory(Category.ADDONS).addCategory(Category.VILLAGER).create();
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
         }
