@@ -20,7 +20,7 @@ public class Main extends JavaPlugin {
         ww = (GetWereWolfAPI) Bukkit.getPluginManager().getPlugin("pluginLG");
 
         ww.loadTranslation(this,"fr");
-        ww.getExtraRoleStuff().add(this);
+        ww.getAddonsList().add(this);
 
 
         try {
