@@ -1,24 +1,13 @@
 package io.github.ph1lou.addon;
 
 
-import io.github.ph1lou.pluginlgapi.GetWereWolfAPI;
-import io.github.ph1lou.pluginlgapi.PlayerWW;
-import io.github.ph1lou.pluginlgapi.WereWolfAPI;
-import io.github.ph1lou.pluginlgapi.enumlg.*;
-import io.github.ph1lou.pluginlgapi.events.DayEvent;
-import io.github.ph1lou.pluginlgapi.events.NewWereWolfEvent;
-import io.github.ph1lou.pluginlgapi.events.NightEvent;
-import io.github.ph1lou.pluginlgapi.events.WereWolfListEvent;
-import io.github.ph1lou.pluginlgapi.rolesattributs.Roles;
-import io.github.ph1lou.pluginlgapi.rolesattributs.RolesVillage;
-import org.bukkit.Bukkit;
-import org.bukkit.Sound;
+import io.github.ph1lou.werewolfapi.GetWereWolfAPI;
+import io.github.ph1lou.werewolfapi.WereWolfAPI;
+import io.github.ph1lou.werewolfapi.events.DayEvent;
+import io.github.ph1lou.werewolfapi.events.NightEvent;
+import io.github.ph1lou.werewolfapi.rolesattributs.RolesVillage;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
-import org.bukkit.event.Listener;
-import org.bukkit.potion.PotionEffect;
-import org.bukkit.potion.PotionEffectType;
-import org.bukkit.scoreboard.Team;
 
 import java.util.UUID;
 
@@ -53,7 +42,7 @@ public class RoleExample extends RolesVillage {
     }
 
     @Override
-    public Boolean isDisplay(String s) {
+    public boolean isDisplay(String s) {
         return s.equals(getDisplay());
     }
 
@@ -63,10 +52,6 @@ public class RoleExample extends RolesVillage {
         //Si qqun récupère ce role en le volant
     }
 
-    @Override
-    public void recoverPower(Player player) {
-        // à l'annonce des rôles
-    }
 
     @Override
     public void recoverPotionEffect(Player player) {

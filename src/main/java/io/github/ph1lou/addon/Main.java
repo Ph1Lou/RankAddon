@@ -1,9 +1,9 @@
 package io.github.ph1lou.addon;
 
-import io.github.ph1lou.pluginlgapi.GetWereWolfAPI;
-import io.github.ph1lou.pluginlgapi.RoleRegister;
-import io.github.ph1lou.pluginlgapi.WereWolfAPI;
-import io.github.ph1lou.pluginlgapi.enumlg.Category;
+import io.github.ph1lou.werewolfapi.GetWereWolfAPI;
+import io.github.ph1lou.werewolfapi.RoleRegister;
+import io.github.ph1lou.werewolfapi.WereWolfAPI;
+import io.github.ph1lou.werewolfapi.enumlg.Category;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
