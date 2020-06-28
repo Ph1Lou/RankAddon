@@ -17,7 +17,7 @@ public class Main extends JavaPlugin {
     @Override
     public void onEnable() {
 
-        ww = (GetWereWolfAPI) Bukkit.getPluginManager().getPlugin("pluginLG");
+        ww = (GetWereWolfAPI) Bukkit.getPluginManager().getPlugin("WereWolfPlugin");
 
         ww.loadTranslation(this,"fr");
         ww.getAddonsList().add(this);
