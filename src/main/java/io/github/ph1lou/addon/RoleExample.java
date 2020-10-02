@@ -36,6 +36,9 @@ public class RoleExample extends RolesVillage {
         return game.translate("werewolf.role.role_example.description");
     }
 
+
+
+    // Ne pas mettre de game.translate ici !!!!!!!!!!!!!
     @Override
     public String getDisplay() {
         return "werewolf.role.role_example.display";

@@ -19,6 +19,11 @@ public class Main extends JavaPlugin {
 
         ww = (GetWereWolfAPI) Bukkit.getPluginManager().getPlugin("WereWolfPlugin");
 
+        if(ww==null) {
+            Bukkit.getLogger().warning("instance werewolfPlugin not loaded");
+            return;
+        }
+
         ww.loadTranslation(this,"fr");
         ww.getAddonsList().add(this);
 

@@ -1,4 +1,4 @@
-"werewolf.role.flute_player.display":
+"werewolf.role.role_example.display":
   '0':
     ==: org.bukkit.inventory.ItemStack
     type: STICK
