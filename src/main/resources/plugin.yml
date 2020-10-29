@@ -1,8 +1,8 @@
-name: pluginexample
+name: rankAddon
 version: "1.0"
 author: Ph1Lou
-main: io.github.ph1lou.addon.Main
-api-version: "1.8"
+main: io.github.ph1lou.rank.Main
+api-version: "1.16"
 load: STARTUP
 depend: [WereWolfPlugin]
 

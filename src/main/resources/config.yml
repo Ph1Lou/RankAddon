@@ -1,0 +1,18 @@
+
+template: '[prefix][name] [suffix]'
+lobbyOnly : false
+
+groups:
+  admin:
+    prefix: '§cAdmin§r » '
+    suffix: ''
+  dev:
+    prefix: '§5Dev§r » '
+    suffix: ''
+  responsable:
+    prefix: '§6Resp§r » '
+    suffix: ''
+users:
+  Ph1Lou:
+    prefix: ''
+    suffix: '&eDieu ☀&f'
