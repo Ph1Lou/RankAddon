@@ -24,8 +24,8 @@ public class Main extends JavaPlugin {
                         "fr",
                         this,
                         new ItemBuilder(UniversalMaterial.BOOK.getType())
-                        .setDisplayName("Addon de Rang")
-                        .setLore(Arrays.asList("Customise les Prefixes","et les Suffixes"))
+                        .setDisplayName("Addon de §bRang")
+                        .setLore(Arrays.asList("Customise les Prefix","et les Suffix","Fait Par Ph1Lou"))
                         .build()
                 )
                 .addAuthors("Ph1Lou",UUID.fromString("056be797-2a0b-4807-9af5-37faf5384396"))

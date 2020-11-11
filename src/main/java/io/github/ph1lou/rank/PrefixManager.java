@@ -58,16 +58,22 @@ public class PrefixManager implements Listener {
 
         String prefix=config.getPrefix(player)+event.getPrefix();
 
-        event.setPrefix(prefix.substring(Math.max(prefix.length()-14,0)));
+        if(prefix.length()<=14){
+            event.setPrefix(prefix);
+        }
+
 
         String suffix = event.getSuffix()+config.getSuffix(player);
 
-        event.setSuffix(suffix.substring(0,Math.min(16,suffix.length())));
+        if(suffix.length()<=16){
+            event.setSuffix(suffix);
+        }
+
     }
 
     @EventHandler
     public void onStart(StartEvent event){
-        Bukkit.getPluginManager().callEvent(new UpdateNameTagEvent());
+        Bukkit.getPluginManager().callEvent(new UpdateNameTagEvent(Bukkit.getOnlinePlayers()));
     }
 
 
