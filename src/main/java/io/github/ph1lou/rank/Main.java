@@ -15,7 +15,7 @@ import java.util.UUID;
 public class Main extends JavaPlugin {
 
 
-    List<String> lore = Arrays.asList("werewolf.rank.desc0","werewolf.rank.desc1","werewolf.rank.desc2");
+    List<String> lore = Arrays.asList("werewolf.rank.desc0","werewolf.rank.desc1");
     @Override
     public void onEnable() {
         saveDefaultConfig();
