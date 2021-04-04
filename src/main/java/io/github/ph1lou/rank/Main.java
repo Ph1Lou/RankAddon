@@ -1,10 +1,10 @@
 package io.github.ph1lou.rank;
 
 import io.github.ph1lou.werewolfapi.GetWereWolfAPI;
-import io.github.ph1lou.werewolfapi.enums.Sounds;
+import io.github.ph1lou.werewolfapi.enums.Sound;
 import io.github.ph1lou.werewolfapi.enums.UniversalMaterial;
 import io.github.ph1lou.werewolfapi.registers.AddonRegister;
-import io.github.ph1lou.werewolfapi.registers.RegisterManager;
+import io.github.ph1lou.werewolfapi.registers.IRegisterManager;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -20,7 +20,7 @@ public class Main extends JavaPlugin {
     public void onEnable() {
         saveDefaultConfig();
         GetWereWolfAPI api = (GetWereWolfAPI)Bukkit.getPluginManager().getPlugin("WereWolfPlugin");
-        RegisterManager registerManager = api.getRegisterManager();
+        IRegisterManager registerManager = api.getRegisterManager();
         registerManager
                 .registerAddon(new AddonRegister("werewolf.rank_addon",
                         "fr",
@@ -28,7 +28,7 @@ public class Main extends JavaPlugin {
                         .setItem(UniversalMaterial.BOOK.getStack())
                         .setLoreKey(lore)
                         .addAuthors("Ph1Lou",UUID.fromString("056be797-2a0b-4807-9af5-37faf5384396"))
-                        .setAction((player, inventory) -> Sounds.ANVIL_USE.play(player)));
+                        .setAction((player, inventory) -> Sound.ANVIL_USE.play(player)));
 
         Bukkit.getPluginManager().registerEvents(new PrefixManager(this,api), this);
     }

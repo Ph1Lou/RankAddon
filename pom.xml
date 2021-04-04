@@ -49,7 +49,7 @@
         <dependency>
             <groupId>io.github.ph1Lou</groupId>
             <artifactId>werewolfapi</artifactId>
-            <version>1.2</version>
+            <version>1.3</version>
         </dependency>
 
 

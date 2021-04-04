@@ -44,10 +44,9 @@ public class Config {
 
 			if (player.hasPermission(group)) {
 
-				if (!player.isPermissionSet(group)) continue;
-
 				prefixSuffix = config.getString("groups." + group + "." + type);
 
+				break;
 			}
 		}
 

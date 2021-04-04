@@ -3,9 +3,9 @@ package io.github.ph1lou.rank;
 import io.github.ph1lou.werewolfapi.GetWereWolfAPI;
 import io.github.ph1lou.werewolfapi.WereWolfAPI;
 import io.github.ph1lou.werewolfapi.enums.StateGame;
-import io.github.ph1lou.werewolfapi.events.StartEvent;
 import io.github.ph1lou.werewolfapi.events.UpdateNameTagEvent;
 import io.github.ph1lou.werewolfapi.events.UpdatePlayerNameTag;
+import io.github.ph1lou.werewolfapi.events.game.game_cycle.StartEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -62,13 +62,11 @@ public class PrefixManager implements Listener {
             event.setPrefix(prefix);
         }
 
-
         String suffix = event.getSuffix()+config.getSuffix(player);
 
         if(suffix.length()<=16){
             event.setSuffix(suffix);
         }
-
     }
 
     @EventHandler
