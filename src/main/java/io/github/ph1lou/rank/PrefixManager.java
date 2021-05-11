@@ -28,13 +28,13 @@ public class PrefixManager implements Listener {
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onPlayerChat(AsyncPlayerChatEvent event) {
 
-        WereWolfAPI ww = api.getWereWolfAPI();
-        if(!ww.isState(StateGame.LOBBY) && config.isLobbyOnly()) return;
+        WereWolfAPI ww = this.api.getWereWolfAPI();
+        if(!ww.isState(StateGame.LOBBY) && this.config.isLobbyOnly()) return;
 
         Player player = event.getPlayer();
-        String prefix = config.getPrefix(player);
-        String suffix = config.getSuffix(player);
-        String template = config.getTemplate();
+        String prefix = this.config.getPrefix(player);
+        String suffix = this.config.getSuffix(player);
+        String template = this.config.getTemplate();
 
         if (template== null) template = "[prefix][name] [suffix]";
 
@@ -46,8 +46,8 @@ public class PrefixManager implements Listener {
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onUpdateScoreBoard(UpdatePlayerNameTag event){
 
-        WereWolfAPI ww = api.getWereWolfAPI();
-        if(!ww.isState(StateGame.LOBBY) && config.isLobbyOnly()) return;
+        WereWolfAPI ww = this.api.getWereWolfAPI();
+        if(!ww.isState(StateGame.LOBBY) && this.config.isLobbyOnly()) return;
 
         UUID uuid = event.getPlayerUUID();
         Player player = Bukkit.getPlayer(uuid);
@@ -56,7 +56,7 @@ public class PrefixManager implements Listener {
             return;
         }
 
-        String prefix=config.getPrefix(player)+event.getPrefix();
+        String prefix=this.config.getPrefix(player)+event.getPrefix();
 
         if(prefix.length()<=14){
             event.setPrefix(prefix);
@@ -71,7 +71,9 @@ public class PrefixManager implements Listener {
 
     @EventHandler
     public void onStart(StartEvent event){
-        Bukkit.getPluginManager().callEvent(new UpdateNameTagEvent(Bukkit.getOnlinePlayers()));
+        this.api.getWereWolfAPI().getPlayerWW()
+                .forEach(playerWW -> Bukkit.getPluginManager().callEvent(new UpdateNameTagEvent(playerWW)));
+
     }
 
 
