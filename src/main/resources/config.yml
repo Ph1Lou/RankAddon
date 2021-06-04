@@ -4,12 +4,15 @@ lobbyOnly : false
 
 groups:
   admin:
+    permission: "admin"
     prefix: ' §cAdmin§r » '
     suffix: ''
   dev:
+    permission: "dev"
     prefix: ' §5Dev§r » '
     suffix: ''
   responsable:
+    permission: "responsable"
     prefix: ' §6Resp§r » '
     suffix: ''
 users:

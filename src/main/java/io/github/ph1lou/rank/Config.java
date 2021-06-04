@@ -42,7 +42,7 @@ public class Config {
 
 		for (String group : groups) {
 
-			if (player.hasPermission(group)) {
+			if (player.hasPermission(config.getString("groups." + group + ".permission"))) {
 
 				prefixSuffix = config.getString("groups." + group + "." + type);
 
@@ -56,6 +56,12 @@ public class Config {
 
 			if (data != null && !data.isEmpty()) {
 				prefixSuffix=data;
+			}
+
+			String dataUUID = config.getString("users." + player.getUniqueId() + "." + type);
+
+			if (data != null && !data.isEmpty()) {
+				prefixSuffix=dataUUID;
 			}
 		}
 

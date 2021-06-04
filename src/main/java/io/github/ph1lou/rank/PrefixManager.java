@@ -4,7 +4,7 @@ import io.github.ph1lou.werewolfapi.GetWereWolfAPI;
 import io.github.ph1lou.werewolfapi.WereWolfAPI;
 import io.github.ph1lou.werewolfapi.enums.StateGame;
 import io.github.ph1lou.werewolfapi.events.UpdateNameTagEvent;
-import io.github.ph1lou.werewolfapi.events.UpdatePlayerNameTag;
+import io.github.ph1lou.werewolfapi.events.UpdatePlayerNameTagEvent;
 import io.github.ph1lou.werewolfapi.events.game.game_cycle.StartEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -44,7 +44,7 @@ public class PrefixManager implements Listener {
     }
 
     @EventHandler(priority = EventPriority.HIGHEST)
-    public void onUpdateScoreBoard(UpdatePlayerNameTag event){
+    public void onUpdateScoreBoard(UpdatePlayerNameTagEvent event){
 
         WereWolfAPI ww = this.api.getWereWolfAPI();
         if(!ww.isState(StateGame.LOBBY) && this.config.isLobbyOnly()) return;
@@ -71,7 +71,7 @@ public class PrefixManager implements Listener {
 
     @EventHandler
     public void onStart(StartEvent event){
-        this.api.getWereWolfAPI().getPlayerWW()
+        this.api.getWereWolfAPI().getPlayersWW()
                 .forEach(playerWW -> Bukkit.getPluginManager().callEvent(new UpdateNameTagEvent(playerWW)));
 
     }
