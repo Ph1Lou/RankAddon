@@ -60,7 +60,7 @@ public class Config {
 
 			String dataUUID = config.getString("users." + player.getUniqueId() + "." + type);
 
-			if (data != null && !data.isEmpty()) {
+			if (dataUUID != null && !dataUUID.isEmpty()) {
 				prefixSuffix=dataUUID;
 			}
 		}
