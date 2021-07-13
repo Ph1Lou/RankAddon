@@ -58,15 +58,11 @@ public class PrefixManager implements Listener {
 
         String prefix=this.config.getPrefix(player)+event.getPrefix();
 
-        if(prefix.length()<=14){
-            event.setPrefix(prefix);
-        }
+        event.setPrefix(event.getPrefix() + prefix);
 
         String suffix = event.getSuffix()+config.getSuffix(player);
 
-        if(suffix.length()<=16){
-            event.setSuffix(suffix);
-        }
+        event.setSuffix(event.getSuffix() + suffix);
     }
 
     @EventHandler
