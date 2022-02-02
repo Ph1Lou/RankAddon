@@ -1,7 +1,7 @@
-name: rankAddon
-version: "1.1"
+name: RankAddon
+version: "1.9"
 author: Ph1Lou
-main: io.github.ph1lou.rank.Main
+main: fr.ph1lou.rank.Main
 load: STARTUP
 depend: [WereWolfPlugin]
 

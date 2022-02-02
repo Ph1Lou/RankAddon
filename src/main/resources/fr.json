@@ -1,9 +1,9 @@
 {
-  "werewolf": {
-    "rank_addon": "RankAddon",
-    "rank": {
-      "desc0": "Customise les Prefix",
-      "desc1":"et les Suffix"
-    }
+  "rank_addon": {
+    "name": "RankAddon",
+    "description": [
+      "Customise les Prefix",
+      "et les Suffix"
+    ]
   }
 }

@@ -1,5 +1,5 @@
 
-package io.github.ph1lou.rank;
+package fr.ph1lou.rank;
 
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;

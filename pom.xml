@@ -47,9 +47,9 @@
         </dependency>
 
         <dependency>
-            <groupId>io.github.ph1Lou</groupId>
-            <artifactId>werewolfapi</artifactId>
-            <version>1.5</version>
+            <groupId>fr.ph1Lou</groupId>
+            <artifactId>WereWolfapi</artifactId>
+            <version>1.9</version>
         </dependency>
 
 

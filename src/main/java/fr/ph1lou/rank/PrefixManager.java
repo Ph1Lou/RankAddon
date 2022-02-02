@@ -1,11 +1,11 @@
-package io.github.ph1lou.rank;
+package fr.ph1lou.rank;
 
-import io.github.ph1lou.werewolfapi.GetWereWolfAPI;
-import io.github.ph1lou.werewolfapi.WereWolfAPI;
-import io.github.ph1lou.werewolfapi.enums.StateGame;
-import io.github.ph1lou.werewolfapi.events.UpdateNameTagEvent;
-import io.github.ph1lou.werewolfapi.events.UpdatePlayerNameTagEvent;
-import io.github.ph1lou.werewolfapi.events.game.game_cycle.StartEvent;
+import fr.ph1lou.werewolfapi.GetWereWolfAPI;
+import fr.ph1lou.werewolfapi.enums.StateGame;
+import fr.ph1lou.werewolfapi.events.UpdateNameTagEvent;
+import fr.ph1lou.werewolfapi.events.UpdatePlayerNameTagEvent;
+import fr.ph1lou.werewolfapi.events.game.game_cycle.StartEvent;
+import fr.ph1lou.werewolfapi.game.WereWolfAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -47,6 +47,7 @@ public class PrefixManager implements Listener {
     public void onUpdateScoreBoard(UpdatePlayerNameTagEvent event){
 
         WereWolfAPI ww = this.api.getWereWolfAPI();
+
         if(!ww.isState(StateGame.LOBBY) && this.config.isLobbyOnly()) return;
 
         UUID uuid = event.getPlayerUUID();
