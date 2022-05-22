@@ -1,9 +1,6 @@
 {
   "rank_addon": {
     "name": "RankAddon",
-    "description": [
-      "Customise les Prefix",
-      "et les Suffix"
-    ]
+    "description": "Customise les Prefix et les Suffix"
   }
 }
