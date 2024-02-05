@@ -57,6 +57,10 @@ public class PrefixManager implements Listener {
             return;
         }
 
+        if(ww.getModerationManager().isStaff(player.getUniqueId())){
+            return;
+        }
+
         String prefix=this.config.getPrefix(player)+event.getPrefix();
 
         event.setPrefix(event.getPrefix() + prefix);
