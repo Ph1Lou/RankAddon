@@ -57,17 +57,17 @@ public class PrefixManager implements Listener {
             return;
         }
 
-        if(ww.getModerationManager().isStaff(player.getUniqueId())){
+        if(ww.getModerationManager().isStaff(player.getUniqueId()) || ww.getModerationManager().getQueue().contains(player.getUniqueId())){
             return;
         }
 
         String prefix=this.config.getPrefix(player)+event.getPrefix();
 
-        event.setPrefix(event.getPrefix() + prefix);
+        event.setPrefix(prefix);
 
         String suffix = event.getSuffix()+config.getSuffix(player);
 
-        event.setSuffix(event.getSuffix() + suffix);
+        event.setSuffix(suffix);
     }
 
     @EventHandler
